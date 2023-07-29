@@ -1,21 +1,18 @@
-<?php include './includes/templates/header.php';
-?><?php
-  // include './includes/templates/header.php';
-  include './includes/templates/config/db.php';
+<?php
+// include './includes/templates/header.php';
+include 'includes/config/db.php';
 
-  if ($_SERVER['REQUEST_METHOD'] === "GET") {
+if ($_SERVER['REQUEST_METHOD'] === "GET") {
+  $idProperty =  $_GET["id"];
 
-    $idProperty =  filter_var(($_GET["id"]), FILTER_VALIDATE_INT);
+  $db = connectDB();
+  $query = "SELECT * FROM propiedades WHERE id = $idProperty";
 
-    if(!$idProperty) exit;
-    $db = connectDB();
-    $query = "SELECT * FROM propiedades WHERE id = $idProperty";
-
-    $result = mysqli_query($db, $query);
-    $property = mysqli_fetch_assoc($result);
-    if($property === null) exit;
-  }
-  ?>
+  $result = mysqli_query($db, $query);
+  $property = mysqli_fetch_assoc($result);
+  print_r($property);
+}
+?>
 <main class="contenedor seccion contenido-centrado">
   <h1><?php echo $property["titulo"]; ?></h1>
   <picture>

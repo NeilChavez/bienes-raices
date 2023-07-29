@@ -10,3 +10,32 @@
     display: flex; 
     justify-content: flex-end;
 }
+
+.error{
+  background-color: red;
+  color: white
+}
+
+.max-width-200{
+  max-width: 200px;
+  height: auto;
+}
+
+.thumbnail-img{
+  border: thick solid red;
+  max-width: 100px;
+  height: auto;
+}
+
+.fluid-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.text-ellipsis-4 {
+   overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 4; /* number of lines to show */
+           line-clamp: 4; 
+   -webkit-box-orient: vertical;
+}
