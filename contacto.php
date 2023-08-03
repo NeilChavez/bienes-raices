@@ -1,4 +1,6 @@
-<?php include './includes/templates/header.php'; ?>
+<?php include './includes/templates/header.php';
+require 'includes/app.php';
+?>
 
     <main class="contenedor seccion">
 

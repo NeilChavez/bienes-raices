@@ -32,6 +32,9 @@ class Vendedores extends ActiveRecord
     if(!$this->telefono){
       self::$errors[] = "Tienes que poner un numero de telefono"; 
     }
+    if(!preg_match('/[0-9]{10}/', $this->telefono)){
+      self::$errors[] = "Tienes que poner un numero de telefono valido";
+    }
     return self::$errors;
   }
 }

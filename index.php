@@ -1,4 +1,5 @@
 <?php
+require 'includes/app.php';
 $inicio = true;
 include './includes/templates/header.php';
 ?>

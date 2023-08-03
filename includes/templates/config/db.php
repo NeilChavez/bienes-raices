@@ -1,6 +1,6 @@
 <?php 
 function connectDB(){ 
-  $db = mysqli_connect("localhost","root", "", "bienesraices_database");
+  $db = new mysqli("localhost","root", "", "bienesraices_database");
   
   if($db){
     return  $db;

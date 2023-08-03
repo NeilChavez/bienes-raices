@@ -43,11 +43,10 @@ class ActiveRecord
     $query .= "' )";
     // debugger($query);
     $resultado = self::$db->query($query);
-    debugger($resultado);
     // mensaje exito o error;
     if ($resultado) {
       echo "si se subio a la base datos";
-      header('Location: /admin?message=success');
+      header('Location: /admin?message=1');
     } else {
       echo "NO se subio";
     }
@@ -146,6 +145,17 @@ class ActiveRecord
   public static function all()
   {
     $query = "SELECT * FROM " . static::$tabla;
+
+    // $result =  self::$db->query($query);
+    $result =  self::consultSQL($query);
+
+    return $result;
+  }
+
+  //Obtiene una determinada cantidad de registros
+  public static function get($cantidad)
+  {
+    $query = "SELECT * FROM " . static::$tabla . " LIMIT " . $cantidad;
 
     // $result =  self::$db->query($query);
     $result =  self::consultSQL($query);
