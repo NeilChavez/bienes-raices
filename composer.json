@@ -2,7 +2,7 @@
   "name": "neillolochavezcutipa/aprendiendo-composer-autoload",
   "autoload": {
     "psr-4": {
-      "App\\": "./classes"
+      "Model\\": "./models"
     }
   },
   "authors": [

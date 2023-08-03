@@ -3,7 +3,7 @@
         'name' => 'neillolochavezcutipa/aprendiendo-composer-autoload',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '863e3d9626e4d66608310b93cd72b7d633a3f232',
+        'reference' => '6b5f99b1b9d3a520b84f580b8cfcaba19495e974',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'guzzlehttp/psr7' => array(
-            'pretty_version' => '2.5.0',
-            'version' => '2.5.0.0',
-            'reference' => 'b635f279edd83fc275f822a1188157ffea568ff6',
+            'pretty_version' => '2.6.0',
+            'version' => '2.6.0.0',
+            'reference' => '8bd7c33a0734ae1c5d074360512beb716bef3f77',
             'type' => 'library',
             'install_path' => __DIR__ . '/../guzzlehttp/psr7',
             'aliases' => array(),
@@ -31,7 +31,7 @@
         'neillolochavezcutipa/aprendiendo-composer-autoload' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '863e3d9626e4d66608310b93cd72b7d633a3f232',
+            'reference' => '6b5f99b1b9d3a520b84f580b8cfcaba19495e974',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
