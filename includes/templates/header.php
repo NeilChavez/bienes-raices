@@ -19,7 +19,7 @@ $auth = $_SESSION["login"] ?? false;
 </head>
 
 <body>
-  <header class="header <?php echo isset($inicio) ? 'inicio' : ''; ?> ">
+  <header class="header <?php echo isset($indexPage) ? 'inicio' : ''; ?> ">
     <div class="contenedor contenido-header">
       <div class="barra">
         <a href="/">
@@ -33,10 +33,10 @@ $auth = $_SESSION["login"] ?? false;
         <div class="derecha">
           <img src="/build/img/dark-mode.svg" class="dark-mode-boton" alt="dark mode">
           <nav class="navegacion">
-            <a href="nosotros.php">Nosotros</a>
-            <a href="anuncios.php">Anuncios</a>
-            <a href="blog.php">Blog</a>
-            <a href="contacto.php">Contacto</a>
+            <a href="aboutUs">Nosotrsos</a>
+            <a href="properties">Anuncios</a>
+            <a href="blog">Blog</a>
+            <a href="contact">Contacto</a>
             <?php if ($auth) : ?>
               <a href="close-session.php">Logout</a>
             <?php endif; ?>

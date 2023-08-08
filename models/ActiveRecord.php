@@ -41,7 +41,7 @@ class ActiveRecord
     $query .= " ) VALUES ( '";
     $query .= join("', '", array_values($attributes));
     $query .= "' )";
-    // debugger($query);
+
     $resultado = self::$db->query($query);
     // mensaje exito o error;
     if ($resultado) {
@@ -54,6 +54,7 @@ class ActiveRecord
 
   public function update()
   {
+    echo "llego a update";
     // sanitizar datos
     $attributes = $this->sanitizeAttributes();
     $valores = [];
@@ -72,7 +73,7 @@ class ActiveRecord
     }
   }
 
-  public function eliminar()
+  public function delete()
   {
     $query = "DELETE FROM " . static::$tabla . " WHERE id = " . self::$db->escape_string($this->id) . " LIMIT 1";
 
@@ -82,6 +83,9 @@ class ActiveRecord
       //si todo salio bien, entonces borra la imagen tambien
       $this->borrarImagen();
       header('Location: /admin?message=3');
+    }else{
+      echo "no funciono'";
+
     }
   }
 
@@ -125,7 +129,7 @@ class ActiveRecord
   //Eliminar archivo
   public function borrarImagen()
   {
-    $fileToDelete = CARPETA_IMAGES . $this->imagen;
+    $fileToDelete = IMAGES_FOLDER . $this->imagen;
     file_exists($fileToDelete) && unlink($fileToDelete);
   }
 

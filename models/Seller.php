@@ -2,7 +2,7 @@
 
 namespace Model;
 
-class Vendedores extends ActiveRecord
+class Seller extends ActiveRecord
 {
   protected static $tabla = "vendedores";
   protected static $columnsDB = ['id', 'nombre', 'apellido', 'telefono'];
